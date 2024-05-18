@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tipe Data BigInt</title>
+</head>
+<body>
+  <h1>Tipe Data BigInt</h1>
+
+  <p>Nilai BigInt:</p>
+  <p id="bigint-value"></p>
+
+  <p>Hasil Operasi Aritmatika:</p>
+  <p id="arithmetic"></p>
+
+  <script>
+    // Tipe data BigInt
+    let bigNumber = 9007199254740991n; // Nilai maksimum Number adalah 9007199254740991
+    document.getElementById("bigint-value").textContent = bigNumber;
+
+    // Operasi Aritmatika dengan BigInt
+    let a = 10n;
+    let b = 5n;
+    let arithmeticResult = a + b + " (Penjumlahan), " + a - b + " (Pengurangan), " + a * b + " (Perkalian), " + a / b + " (Pembagian), " + a % b + " (Modulus)";
+    document.getElementById("arithmetic").textContent = arithmeticResult;
+  </script>
+</body>
+</html>

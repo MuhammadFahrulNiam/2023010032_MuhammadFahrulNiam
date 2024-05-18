@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For...of Statement Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    #result {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>For...of Statement Example</h1>
+
+    <label for="fruits">Enter Fruits (separated by commas):</label>
+    <input type="text" id="fruits" required>
+
+    <button onclick="displayFruits()">Display Fruits</button>
+
+    <div id="result"></div>
+
+    <script>
+      function displayFruits() {
+        const fruitsInput = document.getElementById("fruits");
+        const fruitsArray = fruitsInput.value.split(",").map(fruit => fruit.trim());
+        const resultDiv = document.getElementById("result");
+
+        let output = "";
+
+        for (const fruit of fruitsArray) {
+          output += - ${fruit}<br>;
+        }
+
+        resultDiv.innerHTML = output;
+      }
+    </script>
+  </div>
+</body>
+</html>

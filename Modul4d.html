@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tipe Data Numbers</title>
+</head>
+<body>
+  <h1>Tipe Data Numbers</h1>
+
+  <p>Hasil Operasi Aritmatika:</p>
+  <p id="arithmetic"></p>
+
+  <p>Hasil Operasi Penugasan:</p>
+  <p id="assignment"></p>
+
+  <p>Hasil Operasi Perbandingan:</p>
+  <p id="comparison"></p>
+
+  <p>Hasil Operasi Logika:</p>
+  <p id="logical"></p>
+
+  <p>Hasil Operasi Bitwise:</p>
+  <p id="bitwise"></p>
+
+  <p>Hasil Operasi Unary:</p>
+  <p id="unary"></p>
+
+  <script>
+    // Operasi Aritmatika
+    let a = 10;
+    let b = 5;
+    let arithmeticResult = a + b + " (Penjumlahan), " + a - b + " (Pengurangan), " + a * b + " (Perkalian), " + a / b + " (Pembagian), " + a % b + " (Modulus)";
+    document.getElementById("arithmetic").textContent = arithmeticResult;
+
+    // Operasi Penugasan
+    let c = 20;
+    c += 5; // c = c + 5
+    c -= 3; // c = c - 3
+    c *= 2; // c = c * 2
+    c /= 4; // c = c / 4
+    c %= 3; // c = c % 3
+    let assignmentResult = c;
+    document.getElementById("assignment").textContent = assignmentResult;
+
+    // Operasi Perbandingan
+    let d = 15;
+    let e = 10;
+    let comparisonResult = d > e + " (Greater Than), " + d < e + " (Less Than), " + d >= e + " (Greater Than or Equal To), " + d <= e + " (Less Than or Equal To), " + d == e + " (Equal To), " + d != e + " (Not Equal To)";
+    document.getElementById("comparison").textContent = comparisonResult;
+
+    // Operasi Logika
+    let f = true;
+    let g = false;
+    let logicalResult = f && g + " (AND), " + f || g + " (OR), " + !f + " (NOT)";
+    document.getElementById("logical").textContent = logicalResult;
+
+    // Operasi Bitwise
+    let h = 5; // 0101
+    let i = 3; // 0011
+    let bitwiseResult = (h & i) + " (AND), " + (h | i) + " (OR), " + (h ^ i) + " (XOR), " + (~h) + " (NOT), " + (h << 1) + " (Left Shift), " + (h >> 1) + " (Right Shift)";
+    document.getElementById("bitwise").textContent = bitwiseResult;
+
+    // Operasi Unary
+    let j = 7;
+    let unaryResult = ++j + " (Increment), " + --j + " (Decrement), " + +j + " (Unary Plus), " + -j + " (Unary Minus)";
+    document.getElementById("unary").textContent = unaryResult;
+  </script>
+</body>
+</html>

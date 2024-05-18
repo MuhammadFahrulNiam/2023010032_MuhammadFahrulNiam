@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Operasi Aritmatika</title>
+</head>
+<body>
+  <h1>Operasi Aritmatika</h1>
+
+  <p>Nilai Variabel:</p>
+  <p>a = 20.5, b = 7, c = 35</p>
+
+  <p>Hasil Operasi Aritmatika:</p>
+  <p id="arithmetic-operations"></p>
+
+  <script>
+    // Nilai variabel
+    let a = 20.5;
+    let b = 7;
+    let c = 35;
+
+    // Operasi Aritmatika
+    let addition = a + b;
+    let subtraction = a - b;
+    let multiplication = a * b;
+    let division = a / b;
+    let modulus = a % b;
+    let exponentiation = a ** b;
+
+    // Menampilkan hasil operasi
+    let result = `
+      Penjumlahan: ${a} + ${b} = ${addition}
+      Pengurangan: ${a} - ${b} = ${subtraction}
+      Perkalian: ${a} * ${b} = ${multiplication}
+      Pembagian: ${a} / ${b} = ${division}
+      Modulus: ${a} % ${b} = ${modulus}
+      Pemangkatan: ${a} ** ${b} = ${exponentiation}
+    `;
+
+    document.getElementById("arithmetic-operations").textContent = result;
+  </script>
+</body>
+</html>

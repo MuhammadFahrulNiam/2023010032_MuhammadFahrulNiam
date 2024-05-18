@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tipe Data Undefined</title>
+</head>
+<body>
+  <h1>Tipe Data Undefined</h1>
+
+  <p id="result"></p>
+
+  <script>
+    let myVariable;
+    document.getElementById("result").textContent = myVariable;
+    console.log(myVariable);
+  </script>
+</body>
+</html>

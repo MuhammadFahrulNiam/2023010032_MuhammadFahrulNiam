@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Daftar Teman dan Hobi</h1>
+
+<p id="teman"></p>
+<p id="hobi"></p>
+
+<script>
+// Array nama teman
+const namaTeman = ["Fahrul", "Niam", "Salma", "Novita", "Dinda"];
+
+// Array hobi
+const hobi = ["Membaca", "Bermain Musik", "Olahraga", "Memasak", "Traveling"];
+
+// Tampilkan data array
+function tampilkanData() {
+  let teman = "Daftar Teman: ";
+  let hobis = "Daftar Hobi: ";
+
+  for (let i = 0; i < namaTeman.length; i++) {
+    teman += namaTeman[i] + ", ";
+  }
+
+  for (let i = 0; i < hobi.length; i++) {
+    hobis += hobi[i] + ", ";
+  }
+
+  document.getElementById("teman").innerHTML = teman;
+  document.getElementById("hobi").innerHTML = hobis;
+}
+
+// Panggil fungsi tampilkanData()
+tampilkanData();
+
+// Menambah data ke array
+namaTeman.push("Putri");
+hobi.push("Melukis");
+
+// Hapus data dari array
+namaTeman.splice(2, 1);
+hobi.splice(3, 1);
+
+// Tampilkan data array yang sudah dimanipulasi
+tampilkanData();
+</script>
+
+</body>
+</html>

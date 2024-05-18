@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tipe Data String</title>
+</head>
+<body>
+  <h1>Tipe Data String</h1>
+
+  <p>Nilai String:</p>
+  <p id="string-value"></p>
+
+  <p>Hasil Operasi String:</p>
+  <p id="string-operations"></p>
+
+  <script>
+    // Tipe data String
+    let myString = "Halo, dunia!";
+    document.getElementById("string-value").textContent = myString;
+
+    // Operasi String
+    let firstName = "Fahrul";
+    let lastName = "Niam";
+    let fullName = firstName + " " + lastName;
+    let stringLength = fullName.length;
+    let upperCase = fullName.toUpperCase();
+    let lowerCase = fullName.toLowerCase();
+    let substring = fullName.substring(5, 9);
+    let stringResult = fullName + " (Concatenation), " + stringLength + " (Length), " + upperCase + " (Uppercase), " + lowerCase + " (Lowercase), " + substring + " (Substring)";
+    document.getElementById("string-operations").textContent = stringResult;
+  </script>
+</body>
+</html>

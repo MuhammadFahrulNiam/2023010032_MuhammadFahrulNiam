@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pengurutan Angka</title>
+</head>
+<body>
+    <h1>Pengurutan Angka</h1>
+    <button onclick="sortNumbers()">Urutkan Angka</button>
+    <p id="result"></p>
+
+    <script>
+        function sortNumbers() {
+            // Meminta pengguna memasukkan angka
+            let arr = [];
+            for (let i = 0; i < 5; i++) {
+                let num = parseInt(prompt(Masukkan angka ke-${i + 1}:));
+                arr.push(num);
+            }
+
+            // Mengurutkan angka
+            for (let i = 0; i < arr.length - 1; i++) {
+                for (let j = i + 1; j < arr.length; j++) {
+                    if (arr[j] < arr[i]) {
+                        let temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+
+            // Menampilkan hasil pengurutan
+            let result = "Angka yang telah diurutkan: ";
+            for (let i = 0; i < arr.length; i++) {
+                result += arr[i] + " ";
+            }
+            document.getElementById("result").textContent = result;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Switch Case Example</title>
+</head>
+<body>
+    <h1>Switch Case Example</h1>
+    <label for="dayInput">Masukkan hari (1-7):</label>
+    <input type="number" id="dayInput" min="1" max="7">
+    <button onclick="showDayOfWeek()">Tampilkan Hari</button>
+    <p id="result"></p>
+
+    <script>
+        function showDayOfWeek() {
+            let dayInput = document.getElementById("dayInput").value;
+            let dayOfWeek;
+
+            switch (parseInt(dayInput)) {
+                case 1:
+                    dayOfWeek = "Senin";
+                    break;
+                case 2:
+                    dayOfWeek = "Selasa";
+                    break;
+                case 3:
+                    dayOfWeek = "Rabu";
+                    break;
+                case 4:
+                    dayOfWeek = "Kamis";
+                    break;
+                case 5:
+                    dayOfWeek = "Jumat";
+                    break;
+                case 6:
+                    dayOfWeek = "Sabtu";
+                    break;
+                case 7:
+                    dayOfWeek = "Minggu";
+                    break;
+                default:
+                    dayOfWeek = "Hari tidak valid";
+                    break;
+            }
+
+            document.getElementById("result").textContent = Hari ke-${dayInput} adalah ${dayOfWeek}.;
+        }
+    </script>
+</body>
+</html>

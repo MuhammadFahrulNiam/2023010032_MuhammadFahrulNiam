@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array with Spread Operator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    #array-display {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #array-display li {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Array with Spread Operator</h1>
+
+    <ul id="array-display"></ul>
+
+    <script>
+      // Array of data
+      const data = ["Apple", "Banana", "Cherry", "Date", "Elderberry"];
+
+      // Function to display the array
+      function displayArray(arr) {
+        const arrayDisplay = document.getElementById("array-display");
+        arrayDisplay.innerHTML = "";
+
+        arr.forEach(item => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          arrayDisplay.appendChild(li);
+        });
+      }
+
+      // Call the displayArray function with the data array
+      displayArray(data);
+
+      // Example of using Spread operator
+      const newData = [...data, "Fig", "Grape"];
+      displayArray(newData);
+    </script>
+  </div>
+</body>
+</html

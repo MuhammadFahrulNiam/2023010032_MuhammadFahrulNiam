@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Variabel let</title>
+</head>
+<body>
+  <h1>Variabel let</h1>
+  <button onclick="calculateArea()">Hitung Luas</button>
+  <p id="output"></p>
+
+  <script>
+    function calculateArea() {
+      let width = 5;
+      let height = 10;
+      let area = width * height;
+      document.getElementById("output").textContent = "Luas: " + area;
+    }
+  </script>
+</body>
+</html>

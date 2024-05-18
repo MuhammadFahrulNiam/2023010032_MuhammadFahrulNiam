@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Labeled Statement Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    #result {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Labeled Statement Example</h1>
+
+    <button onclick="findPrime()">Find Prime Numbers</button>
+
+    <div id="result"></div>
+
+    <script>
+      function findPrime() {
+        const resultDiv = document.getElementById("result");
+        let output = "";
+
+        outerLoop: // Labeled statement
+        for (let i = 2; i <= 20; i++) {
+          for (let j = 2; j < i; j++) {
+            if (i % j === 0) {
+              continue outerLoop; // Jumping to the labeled statement
+            }
+          }
+          output += `${i} `;
+        }
+
+        resultDiv.innerHTML = output;
+      }
+    </script>
+  </div>
+</body>
+</html>

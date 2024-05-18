@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Truthy and Falsy Values</title>
+</head>
+<body>
+    <h1>Truthy and Falsy Values</h1>
+    <button onclick="checkTruthyFalsy()">Check Truthy/Falsy</button>
+    <p id="result"></p>
+
+    <script>
+        function checkTruthyFalsy() {
+            // Nilai truthy
+            console.log(isTruthy(true)); // Output: true
+            console.log(isTruthy(1)); // Output: true
+            console.log(isTruthy("hello")); // Output: true
+            console.log(isTruthy({})); // Output: true
+            console.log(isTruthy([])); // Output: true
+
+            // Nilai falsy
+            console.log(isFalsy(false)); // Output: true
+            console.log(isFalsy(0)); // Output: true
+            console.log(isFalsy("")); // Output: true
+            console.log(isFalsy(null)); // Output: true
+            console.log(isFalsy(undefined)); // Output: true
+            console.log(isFalsy(NaN)); // Output: true
+
+            // Menampilkan hasil di halaman web
+            document.getElementById("result").textContent = "Hasil telah dicetak di console.";
+        }
+
+        function isTruthy(x) {
+            return x;
+        }
+
+        function isFalsy(x) {
+            return !x;
+        }
+    </script>
+</body>
+</html>

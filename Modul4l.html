@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Operator Logika</title>
+</head>
+<body>
+  <h1>Operator Logika</h1>
+
+  <p>Nilai Variabel:</p>
+  <p>a = true, b = false, c = true</p>
+
+  <p>Hasil Operator Logika:</p>
+  <p id="logical-operators"></p>
+
+  <script>
+    // Nilai variabel
+    let a = true;
+    let b = false;
+    let c = true;
+
+    // Operator Logika
+    let and = a && b;
+    let or = a || b;
+    let not = !a;
+    let andWithC = a && c;
+    let orWithC = a || c;
+    let notWithC = !c;
+
+    // Menampilkan hasil operator logika
+    let result = `
+      AND: ${a} && ${b} = ${and}
+      OR: ${a} || ${b} = ${or}
+      NOT: !${a} = ${not}
+      AND with C: ${a} && ${c} = ${andWithC}
+      OR with C: ${a} || ${c} = ${orWithC}
+      NOT with C: !${c} = ${notWithC}
+    `;
+
+    document.getElementById("logical-operators").textContent = result;
+  </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Do-While Statement Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    #result {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Do-While Statement Example</h1>
+
+    <label for="number">Enter a number:</label>
+    <input type="number" id="number" min="1" required>
+
+    <button onclick="multiplyTable()">Generate Multiplication Table</button>
+
+    <div id="result"></div>
+
+    <script>
+      function multiplyTable() {
+        const numberInput = document.getElementById("number");
+        const number = parseInt(numberInput.value);
+        const resultDiv = document.getElementById("result");
+
+        let i = 1;
+        let output = "";
+
+        do {
+          output += ${number} x ${i} = ${number * i}<br>;
+          i++;
+        } while (i <= 10);
+
+        resultDiv.innerHTML = output;
+      }
+    </script>
+  </div>
+</body>

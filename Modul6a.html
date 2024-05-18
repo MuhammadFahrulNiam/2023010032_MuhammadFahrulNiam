@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Profil Saya</h1>
+
+<p id="demo"></p>
+
+<script>
+// Definisi objek Profil
+const biodata = {
+  nama: "Fahrul",
+  alamat: "Jl. Puyoh No. 123",
+  kota: "Kudus",
+  provinsi: "Jawa Tengah",
+  kelas: "XII IPA 1",
+  prodi: "Ilmu Pengetahuan Alam"
+};
+
+// Fungsi untuk menampilkan profil
+function tampilkanProfil() {
+  let text = "Nama: " + biodata.nama + "<br>";
+  text += "Alamat: " + biodata.alamat + "<br>";
+  text += "Kota: " + biodata.kota + "<br>";
+  text += "Provinsi: " + biodata.provinsi + "<br>";
+  text += "Kelas: " + biodata.kelas + "<br>";
+  text += "Program Studi: " + biodata.prodi;
+  document.getElementById("demo").innerHTML = text;
+}
+
+// Memanggil fungsi tampilkanProfil()
+tampilkanProfil();
+</script>
+
+</body>
+</html>

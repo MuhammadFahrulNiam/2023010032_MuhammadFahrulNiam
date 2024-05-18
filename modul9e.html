@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Conditional Statements Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    #result {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Conditional Statements Example</h1>
+
+    <label for="age">Enter your age:</label>
+    <input type="number" id="age" min="0" required>
+
+    <button onclick="checkAge()">Check Age</button>
+
+    <div id="result"></div>
+
+    <script>
+      function checkAge() {
+        const ageInput = document.getElementById("age");
+        const age = parseInt(ageInput.value);
+        const resultDiv = document.getElementById("result");
+
+        if (age >= 18) {
+          resultDiv.textContent = "You are an adult.";
+        } else if (age >= 13) {
+          resultDiv.textContent = "You are a teenager.";
+        } else {
+          resultDiv.textContent = "You are a child.";
+        }
+      }
+    </script>
+  </div>
+</body>
+</html>

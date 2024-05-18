@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spread Operator Example</title>
+</head>
+<body>
+  <h1>Array Data:</h1>
+  <div id="arrayData"></div>
+
+  <script>
+    // Contoh array
+    const fruits = ['apple', 'banana', 'cherry'];
+
+    // Menggunakan Spread operator untuk menampilkan array
+    function displayArray(arr) {
+      const element = document.getElementById('arrayData');
+      element.innerHTML = [${[...arr]}];
+    }
+
+    // Memanggil fungsi displayArray dengan array fruits
+    displayArray(fruits);
+  </script>
+</body>
+</html>

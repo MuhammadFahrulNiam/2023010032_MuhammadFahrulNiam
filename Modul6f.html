@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Toko Handphone Cerdas</h1>
+
+<h2>Daftar Handphone</h2>
+<p id="daftarHandphone"></p>
+
+<h2>Total Belanja</h2>
+<p id="totalBelanja"></p>
+
+<script>
+// Daftar handphone yang dijual
+const handphone = [
+  { nama: "Handphone A", harga: 100000 },
+  { nama: "Handphone B", harga: 150000 },
+  { nama: "Handphone C", harga: 200000 },
+  { nama: "Handphone D", harga: 250000 },
+  { nama: "Handphone E", harga: 300000 }
+];
+
+// Fungsi untuk menampilkan daftar handphone
+function displayHandphone(arr) {
+  let list = "";
+  for (let i = 0; i < arr.length; i++) {
+    list += <li>${arr[i].nama} - Rp ${arr[i].harga}</li>;
+  }
+  document.getElementById("daftarHandphone").innerHTML = <ul>${list}</ul>;
+}
+
+// Fungsi untuk menghitung total belanja
+function calculateTotal(arr) {
+  let total = 0;
+  for (let i = 0; i < arr.length; i++) {
+    total += arr[i].harga;
+  }
+  return total;
+}
+
+// Fungsi untuk menghitung diskon 10% untuk member
+function calculateDiscount(total) {
+  const discount = total * 0.1;
+  return total - discount;
+}
+
+// Panggil fungsi untuk menampilkan daftar handphone
+displayHandphone(handphone);
+
+// Hitung total belanja
+const totalBelanja = calculateTotal(handphone);
+document.getElementById("totalBelanja").innerHTML = Total Belanja: Rp ${totalBelanja};
+
+// Hitung total belanja dengan diskon 10% untuk member
+const totalBelanjaDiskon = calculateDiscount(totalBelanja);
+document.getElementById("totalBelanja").innerHTML += <br>Total Belanja dengan Diskon 10% (Member): Rp ${totalBelanjaDiskon};
+</script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For Statement Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    #result {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>For Statement Example</h1>
+
+    <label for="start">Start:</label>
+    <input type="number" id="start" min="1" required>
+
+    <label for="end">End:</label>
+    <input type="number" id="end" min="1" required>
+
+    <button onclick="generateSequence()">Generate Sequence</button>
+
+    <div id="result"></div>
+
+    <script>
+      function generateSequence() {
+        const startInput = document.getElementById("start");
+        const endInput = document.getElementById("end");
+        const start = parseInt(startInput.value);
+        const end = parseInt(endInput.value);
+        const resultDiv = document.getElementById("result");
+
+        let output = "";
+
+        for (let i = start; i <= end; i++) {
+          output += i + " ";
+        }
+
+        resultDiv.textContent = output.trim();
+      }
+    </script>
+  </div>
+</body>
+</html>

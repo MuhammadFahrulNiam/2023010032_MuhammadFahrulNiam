@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tipe Data Boolean</title>
+</head>
+<body>
+  <h1>Tipe Data Boolean</h1>
+
+  <p>Nilai Boolean:</p>
+  <p id="boolean-value"></p>
+
+  <p>Hasil Kondisi:</p>
+  <p id="boolean-condition"></p>
+
+  <script>
+    // Tipe data Boolean
+    let isStudent = true;
+    document.getElementById("boolean-value").textContent = isStudent;
+
+    // Kondisi dengan Boolean
+    let age = 25;
+    let isAdult = age >= 18;
+    let conditionResult = "Apakah orang ini dewasa? " + isAdult;
+    document.getElementById("boolean-condition").textContent = conditionResult;
+  </script>
+</body>
+</html>

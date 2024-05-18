@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Continue Statement Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    #result {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Continue Statement Example</h1>
+
+    <button onclick="displayEvenNumbers()">Display Even Numbers</button>
+
+    <div id="result"></div>
+
+    <script>
+      function displayEvenNumbers() {
+        const resultDiv = document.getElementById("result");
+        let output = "";
+
+        for (let i = 1; i <= 20; i++) {
+          if (i % 2 !== 0) {
+            continue;
+          }
+          output += `${i} `;
+        }
+
+        resultDiv.innerHTML = output;
+      }
+    </script>
+  </div>
+</body>
+</html>

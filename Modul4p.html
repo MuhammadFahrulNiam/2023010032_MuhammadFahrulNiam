@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Name Display and Countdown</title>
+</head>
+<body>
+    <h1>Name Display and Countdown</h1>
+    <button onclick="displayNameAndCountdown()">Start</button>
+    <div id="result"></div>
+
+    <script>
+        function displayNameAndCountdown() {
+            let name = "Nama Anda"; // Ganti dengan nama Anda
+            let resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = "";
+
+            // Menampilkan nama sebanyak 50 kali
+            for (let i = 0; i < 50; i++) {
+                resultDiv.innerHTML += ${i + 1}. ${name}<br>;
+            }
+
+            // Menampilkan urutan dari 50 ke 1
+            for (let j = 50; j > 0; j--) {
+                resultDiv.innerHTML += ${j}<br>;
+            }
+        }
+    </script>
+</body>
+</html>
